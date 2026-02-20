@@ -1,0 +1,80 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>40</x><y>160</y><w>168</w><h>56</h></coordinates><panel_attributes>ProductType
+--
+id: Long
+label: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>160</y><w>168</w><h>64</h></coordinates><panel_attributes>Product
+--
+id: Long
+label: String
+price: Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>568</x><y>0</y><w>168</w><h>56</h></coordinates><panel_attributes>Burger
+--
+id: Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>0</y><w>168</w><h>56</h></coordinates><panel_attributes>Drink
+--
+id: Long
+quantity: Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>0</y><w>168</w><h>56</h></coordinates><panel_attributes>Sauces
+--
+id: Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>0</y><w>168</w><h>56</h></coordinates><panel_attributes>Accompaniments
+--
+id: Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>520</y><w>168</w><h>64</h></coordinates><panel_attributes>Command
+--
+id: Long
+numberCommand: String
+dateOrder: DateTime
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>640</y><w>168</w><h>88</h></coordinates><panel_attributes>Client
+--
+id: Long
+lastname: String
+firstname: String
+email: String
+dateRegister: Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>368</y><w>168</w><h>80</h></coordinates><panel_attributes>CommandLine
+--
+id: Long
+price: Long
+quantity: Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>176</y><w>128</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*
+</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>440</y><w>40</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+
+m2=1
+
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>112</x><y>48</y><w>216</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>250;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>48</y><w>88</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>48</y><w>200</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>424</x><y>48</y><w>72</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>576</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>536</y><w>168</w><h>56</h></coordinates><panel_attributes>Ingredient
+--
+id: Long
+label: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>392</y><w>168</w><h>72</h></coordinates><panel_attributes>Supplement
+--
+id: Long
+quantity: Integer
+price: Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>536</y><w>168</w><h>56</h></coordinates><panel_attributes>Stock
+--
+id: Long
+number: Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>680</y><w>168</w><h>56</h></coordinates><panel_attributes>IngredientType
+--
+id: Long
+label: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>584</y><w>40</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>408</y><w>144</w><h>32</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>576</y><w>168</w><h>56</h></coordinates><panel_attributes>Channel
+--
+id: Long
+label: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>464</y><w>168</w><h>56</h></coordinates><panel_attributes>CommandStatus
+--
+id: Long
+label: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>488</y><w>120</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+</panel_attributes><additional_attributes>10;10;130;60</additional_attributes></element><element><id>Relation</id><coordinates><x>208</x><y>552</y><w>120</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+</panel_attributes><additional_attributes>10;70;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>560</y><w>120</w><h>32</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>456</y><w>40</w><h>96</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>216</y><w>40</w><h>168</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>0</y><w>168</w><h>56</h></coordinates><panel_attributes>Allergies
+--
+id: Long</panel_attributes><additional_attributes></additional_attributes></element></diagram>
