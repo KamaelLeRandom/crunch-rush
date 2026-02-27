@@ -1,0 +1,34 @@
+context BurgerPersonnalise
+inv PainEtProteineObligatoires:
+    not self.painChoisi.oclIsUndefined() and
+    not self.proteine.oclIsUndefined()
+
+
+
+context Produit
+inv MargeRespectee:
+    self.prixTTC >= self.getCoutActuel()
+
+
+
+context Client
+inv NiveauFideliteCoherent:
+    (self.pointsFidelite >= 0 and self.pointsFidelite <= 49 implies self.niveau = NiveauFidelite::BRONZE) and
+    (self.pointsFidelite >= 50 and self.pointsFidelite <= 199 implies self.niveau = NiveauFidelite::SILVER) and
+    (self.pointsFidelite >= 200 implies self.niveau = NiveauFidelite::GOLD)
+
+
+
+context Commande::calculerMontantTotal(): double
+post MontantCorrect:
+    montant = (self.lignes->collect(l | l.getSousTotal())->sum()) -
+              (if self.promotion.oclIsUndefined() then 0
+               else self.promotion.appliquerReduction(self.lignes->collect(l | l.getSousTotal())->sum()) 
+              endif 
+
+
+
+context Commande
+inv PromotionApplicable:
+    not self.promotion.oclIsUndefined() implies
+    self.lignes->exists(l | self.promotion.estApplicable(l.getProduit()))
